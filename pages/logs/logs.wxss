@@ -1,0 +1,33 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  /* background-image: url(../../images/envelope.png); */
+  /* background-repeat: round; */
+  padding: 40rpx;
+}
+
+.block-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  /* background-image: url(../../images/inputbackground.png);
+  background-repeat: round; */
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.texta {
+  height: 800rpx;
+  margin-left: 33rpx;
+}

@@ -1,0 +1,18 @@
+<!--index.wxml-->
+
+<view class="container">
+  <image src="../../images/background.png" style="height: {{wininfo[0]}}px;;width:{{wininfo[1]}}px;;position: absolute"></image> 
+  <scroll-view class="scroll-view_H" scroll-y style="width: 100%" wx:key="date">
+    <view wx:for="{{memo}}" class="box">
+      <view class="item" data-text="{{item.key}}" bindtap="actionitem">
+        {{item.date}}
+      </view>
+      <view class="item" data-text="{{item.key}}" bindtap="actionitem">
+        <text class="text">{{item.content}}</text>
+      </view>
+    </view>
+    <view class="item-new" bindtap="primary">
+      <image src='../../images/add.png' style="width: 50rpx;;height: 50rpx"></image>
+    </view>
+  </scroll-view>
+</view>

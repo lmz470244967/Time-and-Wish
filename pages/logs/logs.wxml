@@ -1,0 +1,40 @@
+<!--logs.wxml-->
+<view class="log-list">
+  <!-- 三个按钮 -->
+  <view class="block-item">
+    <image src="../../images/back.png" style="height: 25px;;width: 25px" bindtap="back"></image>
+    <image src="../../images/compose.png" bindtap="focus" style="height: 25px;;width: 25px"></image>
+    <image src="../../images/delete.png" bindtap="delete1" style="height: 25px;;width: 25px"></image>
+  </view>
+
+  <!-- 背景图片 -->
+  <image src="../../images/envelope.png" style="height: 800rpx;;width:660rpx;;position: absolute;;margin-top: 50rpx"></image>
+  <!-- 多行文本输入框 -->
+  <textarea name="textarea" class="texta" focus="{{focus}}" cursor-spacing="10px" confirm="true" bindconfirm="complish" auto-fill="true" value="{{sentence}}" bindblur="EventHandle" />
+  
+  <!-- 保存和重置按钮，需要点击编辑之后可见 -->
+  <view class="btn-area">
+    <image src="../../images/add1.png" bindtap="formSubmit" hidden="{{!focus}}" style="height: 25px;;width: 25px"></image>
+    <image src="../../images/cancel.png" bindtap="formReset" hidden="{{!focus}}" style="height: 25px;;width: 25px"></image>
+  </view>
+  
+   <image src="../../images/inputbackground.png" style="height: 250rpx;;width:660rpx;;position: absolute;;margin-top: 850rpx;;opacity: 0.6"></image>
+
+  <!-- 日期输入下拉选框 -->
+  <picker value="{{date}}" bindchange="bindPickerChange" fields="day" mode="date" start="1990-01-01" end="2020-12-31">
+    <view style="margin-left: 39rpx;">{{dateCN}}</view>
+  </picker>
+  
+  <!-- input输入缺钱数目 -->
+  <view class="box">
+    <text>我还差</text>
+    <input bindblur="input1" maxlength="6" style="width: 80rpx" value="{{mod}}" />
+    <text>块就能实现愿望了！</text>
+  </view>
+
+  <!-- 显示相差天数 -->
+  <view class="box">
+    还差{{dif}}天了！
+  </view>
+
+</view>

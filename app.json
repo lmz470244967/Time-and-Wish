@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/storage/storage",  
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Wish",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",    
+    "list": [
+      {
+        "selectedIconPath": "images/selectedindex.png",
+        "iconPath":  "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "心愿单"
+      },
+      {
+        "selectedIconPath":"images/selectededit.png",
+        "iconPath":"images/edit.png",
+        "pagePath": "pages/storage/storage",
+        "text": "存钱树"
+      }
+    ]
+  }
+}

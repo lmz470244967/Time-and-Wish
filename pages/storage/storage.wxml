@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="section">
+    <view class="box">
+      <!-- <text style="margin-left:20rpx">我的小金库</text> -->
+      <image src="../../images/pig.png" style="height: 30px;;width: 30px"></image>
+      <text style="margin-left: 20rpx">￥{{total}}</text>
+      <!-- <text>我要存一月</text>
+    <switch checked bindchange="switch1Change"/> -->
+    </view>
+    <!-- <text style="margin-left:20rpx">我可以实现</text> -->
+
+    <scroll-view class="scroll-view_H1" scroll-y>
+      <view class="box">
+        <image src="../../images/wish.png" style="height: 30px;;width: 40px"></image>
+        <view wx:for="{{wish}}" class="section-item">
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="scroll-view_H2" scroll-y>
+      <view class="box">
+        <view wx:for="{{array}}" class="item" data-text="{{item}}" wx:key="{{item}}" bindtap="actionitem">
+          <text hidden="{{item.tar==1}}">{{item.num}}</text>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="tree" animation="{{animation}}">
+      <image src="{{tree}}" style="height: {{size}}rpx;;width: {{size}}rpx"></image>
+    </view>
+  </view>
+</view>
